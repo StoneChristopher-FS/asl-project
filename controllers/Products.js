@@ -1,28 +1,38 @@
+const { redirect } = require('express/lib/response')
 const Products = require('../models/Products')
 
 const index = (req, res) => {
     const products = Products.all()
-    res.json(products)
+    res.render('views/products/index', { products })
+}
+
+const form = (req, res) => {
+    if(req.params.id) {
+        const product = Products.find(req.params.id)
+        res.render('views/products/edit', { product })
+    } else {
+        res.render('views/products/create')
+    }
 }
 
 const show = (req, res) => {
     const product = Products.find(req.params.id)
-    res.json(product)
+    res.render('views/products/show', { product })
 }
 
 const create = (req, res) => {
     const product = Products.create(req.body)
-    res.json(product)
+    res.redirect('/products/' + product.id)
 }
 
 const update = (req, res) => {
     const product = Products.update(req.params.id, req.body)
-    res.json(product)
+    res.redirect('/products/' + req.params.id)
 }
 
 const remove = (req, res) => {
     const products = Products.remove(req.params.id)
-    res.json(products)
+    res.redirect('/products/')
 }
 
-module.exports = { index, show, create, update, remove }
+module.exports = { index, form, show, create, update, remove }
