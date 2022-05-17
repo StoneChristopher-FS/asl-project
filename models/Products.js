@@ -2,27 +2,32 @@ let products = [
     {
         id: '1', 
         'slug':'nike-shoe',
-        'name':'Nike Shoe'
+        'name':'Nike Shoe',
+        'price': 59.99
     },
     {
         id: '2', 
         'slug':'polo-shirt',
-        'name':'Polo Shirt'
+        'name':'Polo Shirt',
+        'price': 40.00
     },
     {
         id: '3', 
         'slug':'khaki-shorts',
-        'name':'Khaki Shorts'
+        'name':'Khaki Shorts',
+        'price': 35.50
     },
     {
         id: '4', 
         'slug':'dress-shoe',
-        'name':'Dress Shoe'
+        'name':'Dress Shoe',
+        'price': 79.99
     },
     {
         id: '5', 
         'slug':'dress-belt',
-        'name':'Dress Belt'
+        'name':'Dress Belt',
+        'price': 15.99
     },
 ]
 
