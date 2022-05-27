@@ -1,4 +1,3 @@
-const { redirect } = require('express/lib/response')
 const { Product } = require('../models')
 
 const index = async (req, res) => {

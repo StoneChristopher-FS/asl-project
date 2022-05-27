@@ -1,5 +1,4 @@
-const { redirect } = require('express/lib/response')
-const { Variant } = require('../models')
+const { Variant, Product } = require('../models')
 
 const index = async (req, res) => {
     const variants = await Variant.findAll()
@@ -7,17 +6,19 @@ const index = async (req, res) => {
 }
 
 const form = async (req, res) => {
+    const products = await Product.findAll()
     if(req.params.id) {
         const variant = await Variant.findByPk(req.params.id)
-        res.render('views/variants/edit', { variant })
+        res.render('views/variants/edit', { variant, products })
     } else {
-        res.render('views/variants/create')
+        res.render('views/variants/create', { products })
     }
 }
 
 const show = async (req, res) => {
     const variant = await Variant.findByPk(req.params.id)
-    res.render('views/variants/show', { variant })
+    const product = await variant.getProduct()
+    res.render('views/variants/show', { variant, product })
 }
 
 const create = async (req, res) => {

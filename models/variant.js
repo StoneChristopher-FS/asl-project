@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.Variant.hasMany(models.Image)
+      models.Variant.belongsTo(models.Product)
     }
   }
   Variant.init({

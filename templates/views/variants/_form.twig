@@ -7,6 +7,15 @@
         <input type="text" name="title" id="title" value="{{ variant.title }}">
     </div>
     <div>
+        <label for="">Product:</label>
+        <select name="productId" id="">
+            {% for product in products %}
+                <option value="{{ product.id }}" {% if product.id == variant.productId %}selected='selected'{% endif %}
+                >{{ product.title }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div>
         <input type="submit">
     </div
 </form>
