@@ -5,8 +5,17 @@
     <div>
         <label for="title">Name:</label>
         <input type="text" name="title" id="title" value="{{ product.title }}">
+        <label for="slug">Slug:</label>
+        <input type="text" name="slug" id="slug" value="{{ product.slug }}">
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" value="{{ product.description }}">
         <label for="price">Price:</label>
         <input type="number" min="0" step="any" name="price" id="price" value="{{ product.price }}">
+        <label for="is_published">Published:</label>
+        <select name="is_published">
+            <option value="{{product.is_published == 1}}">True</option>
+            <option value="{{product.is_published == 0}}">False</option>
+        </select>
     </div>
     <div>
         <input type="submit">
