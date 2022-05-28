@@ -1,3 +1,5 @@
+
+
 <form method="POST" action="/products/{% if product.id %}{{ product.id }}{% endif %}">
     {% if product.id %}
         <input type="hidden" name="id" value="{{ product.id }}">
@@ -15,10 +17,10 @@
         <label for="price">Price:</label>
         <input type="number" min="0" step="any" name="price" id="price" value="{{ product.price }}">
         
-        <label for="is_published">Published:</label>
+        <label>Published:</label>
         <select name="is_published">
-            <option value="{{product.is_published == 1}}">True</option>
-            <option value="{{product.is_published == 0}}">False</option>
+            <option value="1">True</option>
+            <option value="0">False</option>
         </select>
     </div>
     <div>
