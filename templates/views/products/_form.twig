@@ -1,12 +1,27 @@
+
+
 <form method="POST" action="/products/{% if product.id %}{{ product.id }}{% endif %}">
     {% if product.id %}
         <input type="hidden" name="id" value="{{ product.id }}">
     {% endif %}
     <div>
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" value="{{ product.name }}">
+        <label for="title">Name:</label>
+        <input type="text" name="title" id="title" value="{{ product.title }}">
+
+        <label for="slug">Slug:</label>
+        <input type="text" name="slug" id="slug" value="{{ product.slug }}">
+
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" value="{{ product.description }}">
+
         <label for="price">Price:</label>
         <input type="number" min="0" step="any" name="price" id="price" value="{{ product.price }}">
+        
+        <label>Published:</label>
+        <select name="is_published">
+            <option value="1">True</option>
+            <option value="0">False</option>
+        </select>
     </div>
     <div>
         <input type="submit">
