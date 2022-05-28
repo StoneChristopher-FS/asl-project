@@ -4,13 +4,19 @@
 <h2>About {{ variant.title }}</h2>
     <ul style="list-style: none;">
         <li>
-            <label>Id: </label> {{ variant.id }}
+            <label>Name: </label> {{ variant.title }}
         </li>
         <li>
-            <label>Title: </label> {{ variant.title }}
+            <label>Slug: </label> {{ variant.slug }}
         </li>
         <li>
-            <label>Product: </label> {{ product.title }}
+            <label>Description: </label> {{ variant.description }}
+        </li>
+        <li>
+            <label>Price: $</label> {{ variant.price }}
+        </li>
+        <li>
+            <label>Inventory: $</label> {{ variant.inventory }}
         </li>
     </ul>
     <p>
