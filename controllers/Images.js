@@ -8,6 +8,7 @@ const index = async (req, res) => {
 }
 
 const form = async (req, res) => {
+	console.log('----------- form')
 	const variants = await Variant.findAll()
 	if (req.params.id) {
 		const image = await Image.findByPk(req.params.id)
@@ -15,12 +16,15 @@ const form = async (req, res) => {
 	} else {
 		res.render('views/images/create', { variants })
 	}
+	return
 }
 
 const show = async (req, res) => {
+	console.log('----------- show' + req.params.id)
 	const image = await Image.findByPk(req.params.id)
 	const variant = await image.getVariant()
 	res.render('views/images/show', { image, variant })
+	return
 }
 
 const create = async (req, res, next) => {

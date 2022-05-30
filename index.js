@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
     res.render('views/home')
 })
 
-app.use(express.static('public'))
+app.use('/public', express.static('public'))
 
 app.use('/products', productRouter)
 app.use('/variants', variantsRouter)

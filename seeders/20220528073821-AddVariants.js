@@ -22,16 +22,11 @@ module.exports = {
       { id: 3, title: 'Small', slug: 'small', description, price: 15, productId: 2, inventory: 0, createdAt, updatedAt  },
       { id: 4, title: 'Large', slug: 'large', description, price: 15, productId: 2, inventory: 10, createdAt, updatedAt  },
       { id: 5, title: 'Small Red', slug: 'small-red', description, price: 50, productId: 3, inventory: 5, createdAt, updatedAt  },
-      { id: 6, title: 'Medium Red', slug: 'medium-red', description, price: 50, productId: 3, inventory: 10, createdAt, updatedAt  },
-      { id: 7, title: 'Small Orange', slug: 'small-orange', description, price: 50, productId: 3, inventory: 10, createdAt, updatedAt  },
-      { id: 8, title: 'Medium Orange', slug: 'medium-orange', description, price: 50, productId: 3, inventory: 3, createdAt, updatedAt  },
-      { id: 9, title: 'Small', slug: 'small', description, price: 60, productId: 4, inventory: 3, createdAt, updatedAt  },
-      { id: 10, title: 'Medium', slug: 'medium', description, price: 60, productId: 4, inventory: 3, createdAt, updatedAt  },
-      { id: 11, title: 'Large', slug: 'large', description, price: 60, productId: 4, inventory: 3, createdAt, updatedAt  },
-      { id: 12, title: 'Medium Black', slug: 'medium-black', description, price: 35, productId: 5, inventory: 15, createdAt, updatedAt  },
-      { id: 13, title: 'Large Black', slug: 'large-black', description, price: 35, productId: 5, inventory: 10, createdAt, updatedAt  },
-      { id: 14, title: 'Medium White', slug: 'medium-white', description, price: 35, productId: 5, inventory: 5, createdAt, updatedAt  },
-      { id: 15, title: 'Large White', slug: 'large-white', description, price: 35, productId: 5, inventory: 20, createdAt, updatedAt  }
+      { id: 6, title: 'Small Orange', slug: 'small-orange', description, price: 50, productId: 3, inventory: 10, createdAt, updatedAt  },
+      { id: 7, title: 'Small', slug: 'small', description, price: 60, productId: 4, inventory: 3, createdAt, updatedAt  },
+      { id: 8, title: 'Medium', slug: 'medium', description, price: 60, productId: 4, inventory: 3, createdAt, updatedAt  },
+      { id: 9, title: 'Large Black', slug: 'large-black', description, price: 35, productId: 5, inventory: 10, createdAt, updatedAt  },
+      { id: 10, title: 'Large White', slug: 'large-white', description, price: 35, productId: 5, inventory: 20, createdAt, updatedAt  }
     ])
   },
 
