@@ -1,0 +1,21 @@
+{% extends "../../layouts/base.twig" %}
+
+{% block main_content %}
+
+    <h1>Store</h1>
+
+    <div>
+		    <hr />
+
+            <div class="container">
+                {% for product in products %}
+                    <a href="store/products/{{product.slug}}" class="card">
+                        <img src="/public/images/{{ product.Variants[0].Images[0].id }}{{ product.Variants[0].Images[0].extension}}">
+                        <h2>{{ product.title }}: ${{ product.price }}</h2>
+                    </a>
+                {% endfor %}
+            </div>
+    </div>
+    
+
+{% endblock %}
