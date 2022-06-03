@@ -17,16 +17,16 @@ module.exports = {
      * }], {});
     */
     return await queryInterface.bulkInsert('Variants', [
-      { id: 1, title: 'Gold', slug: 'gold', description, price: 20, productId: 1, inventory: 8, createdAt, updatedAt  },
+      { id: 1, title: 'Gold', slug: 'gold', description, price: 30, productId: 1, inventory: 8, createdAt, updatedAt  },
       { id: 2, title: 'Silver', slug: 'silver', description, price: 20, productId: 1, inventory: 10, createdAt, updatedAt  },
       { id: 3, title: 'Small', slug: 'small', description, price: 15, productId: 2, inventory: 0, createdAt, updatedAt  },
-      { id: 4, title: 'Large', slug: 'large', description, price: 15, productId: 2, inventory: 10, createdAt, updatedAt  },
+      { id: 4, title: 'Large', slug: 'large', description, price: 20, productId: 2, inventory: 10, createdAt, updatedAt  },
       { id: 5, title: 'Small Red', slug: 'small-red', description, price: 50, productId: 3, inventory: 5, createdAt, updatedAt  },
-      { id: 6, title: 'Small Orange', slug: 'small-orange', description, price: 50, productId: 3, inventory: 10, createdAt, updatedAt  },
+      { id: 6, title: 'Small Orange', slug: 'small-orange', description, price: 55, productId: 3, inventory: 10, createdAt, updatedAt  },
       { id: 7, title: 'Small', slug: 'small', description, price: 60, productId: 4, inventory: 3, createdAt, updatedAt  },
-      { id: 8, title: 'Medium', slug: 'medium', description, price: 60, productId: 4, inventory: 3, createdAt, updatedAt  },
+      { id: 8, title: 'Medium', slug: 'medium', description, price: 65, productId: 4, inventory: 3, createdAt, updatedAt  },
       { id: 9, title: 'Large Black', slug: 'large-black', description, price: 35, productId: 5, inventory: 10, createdAt, updatedAt  },
-      { id: 10, title: 'Large White', slug: 'large-white', description, price: 35, productId: 5, inventory: 20, createdAt, updatedAt  }
+      { id: 10, title: 'Large White', slug: 'large-white', description, price: 40, productId: 5, inventory: 20, createdAt, updatedAt  }
     ])
   },
 
